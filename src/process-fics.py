@@ -1,4 +1,5 @@
-import os
+# Utility script to process FICS PGN files downloaded from https://www.ficsgames.org/
+# Removes disconnection games and games shorter than 5 moves. Combines all months into a single file. Strips metadata.
 
 def reduce_pgn(input_path: str, output_path: str) -> None:
   with open(input_path, 'r', encoding='utf-8') as inp, open(output_path, 'a', encoding='utf-8') as out:

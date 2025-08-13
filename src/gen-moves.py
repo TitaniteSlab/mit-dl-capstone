@@ -1,5 +1,5 @@
+# Utility script to generate a list of legal moves for the output layer of the neural network.
 import json
-import string
 
 FILES = "abcdefgh"
 RANKS = "12345678"
