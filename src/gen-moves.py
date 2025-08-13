@@ -109,14 +109,9 @@ for r_from in range(8):
 
 print(f"len(moves): {len(moves)}")
 
-with open("data/moves_legal.json", "w") as f:
-    json.dump(moves, f, indent=2)
-
-print("Wrote data/moves_legal.json with", len(moves), "entries")
-
 uci_moves = [m["from"] + m["to"] + (m["promotion"] if m["promotion"] else "") for m in moves]
 
-with open("data/moves_legal_uci.txt", "w") as f:
+with open("../data/moves.txt", "w") as f:
     f.write("\n".join(uci_moves) + "\n")
 
-print("Wrote data/moves_legal_uci.txt with", len(uci_moves), "entries")
+print("Wrote data/moves.txt with", len(uci_moves), "entries")
